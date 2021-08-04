@@ -20,7 +20,11 @@ npm start
 ## Install
 
 ```bash
-npm install --save ether-react
+npm install --save ether-contract-react
+```
+or 
+```bash
+yarn add ether-contract-react
 ```
 
 ## Usage
@@ -28,16 +32,27 @@ npm install --save ether-react
 ```tsx
 import React from 'react'
 
-import { ExampleComponent } from 'ether-react'
-import 'ether-react/dist/index.css'
+import { SXContractComponent } from 'ether-contract-react'
+import 'ether-contract-react/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="DApp 🚀" />
+  return <SXContractComponent text="DApp 🚀" />
 }
 
 export default App
 ```
 
+## Run
+### ONLY RUN on Rinkeby TestNet
+
+```bash
+npm run start
+```
+or 
+```bash
+yarn start
+```
+
 ## License
 
-MIT © [IPDID](https://github.com/IPDID)
+MIT ©2021 [IPDID](https://github.com/IPDID)
