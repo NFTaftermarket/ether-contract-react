@@ -1,6 +1,6 @@
 import React from 'react'
-import { today, CurrentProvider, SXContractComponent, Contract_ro, ConnectComponent } from '@NFTaftermarket/superxerox2'
-import '@NFTaftermarket/superxerox2/dist/index.css'
+import { today, CurrentProvider, SXContractComponent, Contract_ro, ConnectComponent } from '@nftaftermarket/superxerox2'
+import '@nftaftermarket/superxerox2/dist/index.css'
 
 const App = () => {
   (async function run() {
