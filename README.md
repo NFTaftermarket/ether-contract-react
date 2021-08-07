@@ -20,11 +20,11 @@ npm start
 ## Install
 
 ```bash
-npm install --save ether-contract-react
+npm install --save NFTaftermarket/superxerox2
 ```
 or 
 ```bash
-yarn add ether-contract-react
+yarn add NFTaftermarket/superxerox2
 ```
 
 ## Usage
@@ -32,8 +32,8 @@ yarn add ether-contract-react
 ```tsx
 import React from 'react'
 
-import { SXContractComponent } from 'ether-contract-react'
-import 'ether-contract-react/dist/index.css'
+import { SXContractComponent } from 'NFTaftermarket/superxerox2'
+import 'NFTaftermarket/superxerox2/dist/index.css'
 
 const App = () => {
   return <SXContractComponent text="DApp 🚀" />

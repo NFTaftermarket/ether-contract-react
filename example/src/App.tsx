@@ -1,12 +1,12 @@
 import React from 'react'
-import { today, CurrentProvider, SXContractComponent, Contract_ro, ConnectComponent } from 'ether-contract-react'
-import 'ether-contract-react/dist/index.css'
+import { today, CurrentProvider, SXContractComponent, Contract_ro, ConnectComponent } from '@NFTaftermarket/superxerox2'
+import '@NFTaftermarket/superxerox2/dist/index.css'
 
 const App = () => {
   (async function run() {
     const x: any = await CurrentProvider.getNetwork()
     console.log('💋current network: ', x.name)
-    if ('rinkeby' === x.name) {
+    if ('ropsten' === x.name) {
 
       Contract_ro.getNetFlow()
         .then((x: any) => {

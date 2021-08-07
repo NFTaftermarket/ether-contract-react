@@ -11,7 +11,8 @@ interface Props {
   text: string
 }
 
-const SXContract = "0x68cB5B558F15799920E0D038eF87544e670af503" // copy machine address
+// const SXContract = "0x68cB5B558F15799920E0D038eF87544e670af503" // copy machine address for Rinkeby
+const SXContract = "0x34b0f1e2ad834a28da1651cc3c1e27978b74a971" // copy machine address for Ropsten
 const provider: Web3Provider = new ethers.providers.Web3Provider(window.ethereum)
 const superXeroXContract_ro = new Contract(
   SXContract,
@@ -47,7 +48,7 @@ export const SXContractComponent = ({ text }: Props) => {
   const updateNetFlow = async () => {
     const x: any = await provider.getNetwork()
     console.log('current network: ', x.name)
-    if (x.name === 'rinkeby') {
+    if (x.name === 'ropsten') {
     superXeroXContract_ro.getNetFlow()
       .then(
         (x: BigNumber) => {
@@ -58,7 +59,7 @@ export const SXContractComponent = ({ text }: Props) => {
         }
       )
     } else {
-      alert('please switch metamask to Rinkeby test network')
+      alert('please switch metamask to Ropsten test network')
     }
   }
 
@@ -83,7 +84,7 @@ export const SXContractComponent = ({ text }: Props) => {
   }, []);
 
   return <div className={styles.test}>
-    ⛑ Ethereum: {text} {val} {account} network: {chainId} netflow: {netFlow}
+    ⛑ SuperXEROX 2 (flow fDAIx to 0x34b0f1e2ad834a28da1651cc3c1e27978b74a971 will see the netFlow, you can use https://app.superfluid.finance/) {text} {val} {account} network: {chainId} netflow: (fDAIx/COPY) {netFlow} per hour
   </div>
 }
 

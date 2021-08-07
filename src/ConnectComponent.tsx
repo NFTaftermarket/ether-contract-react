@@ -103,7 +103,7 @@ export const ConnectComponent = ({ text }: Props) => {
   }
 
   return <div className={styles.test}>
-    🦋 Ethereum: {text} {val} {account} chainId: {chainId} 🚀
+    🦋 Connect to Ropsten (0x3) Testnet Only: {text} {val} {account} chainId: {chainId} 🚀
     <button type="button" onClick={connectMetamask}>
       📡 connect !!
     </button>
